@@ -1,0 +1,11 @@
+name: Industrial_CV_Defect_Detection
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      epochs: {type: int, default: 10}
+      batch_size: {type: int, default: 8}
+      learning_rate: {type: float, default: 0.001}
+    command: "python src/training/train.py --epochs {epochs} --batch_size {batch_size} --lr {learning_rate}"
