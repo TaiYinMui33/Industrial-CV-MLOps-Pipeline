@@ -1,0 +1,13 @@
+name: cv-mlops-env
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - torchvision
+  - pip:
+    - mlflow
+    - albumentations
+    - opencv-python-headless
