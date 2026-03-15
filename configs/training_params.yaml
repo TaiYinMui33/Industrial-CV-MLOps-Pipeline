@@ -1,0 +1,17 @@
+# Industrial Defect Detection Configuration
+model:
+  architecture: "faster_rcnn_resnet50_fpn"
+  num_classes: 3 # Background, Crack, Corrosion
+  pretrained: true
+
+data:
+  train_path: "data/train"
+  val_path: "data/val"
+  image_size: [640, 640]
+  augmentation_level: "heavy"
+
+training:
+  optimizer: "AdamW"
+  scheduler: "CosineAnnealingLR"
+  early_stopping_patience: 10
+  mixed_precision: true
